@@ -1,0 +1,12 @@
+.title {
+  width: 100%;
+  max-width: 150px;
+  margin: 2.5rem auto;
+  letter-spacing: 1rem;
+  text-align: center;
+  word-wrap: break-word;
+  color: hsl(183, 100%, 15%);
+}
+
+@media (min-width: 768px) {
+}
