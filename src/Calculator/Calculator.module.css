@@ -1,0 +1,9 @@
+.calculator {
+  flex: 1 1 auto;
+  background-color: #ffffff;
+}
+
+.calculator-container {
+  width: 85%;
+  margin: 0 auto;
+}
