@@ -8,5 +8,6 @@
   flex-direction: column;
   height: 100%;
   width: 85%;
+  max-width: 500px;
   margin: 0 auto;
 }
