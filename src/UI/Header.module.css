@@ -7,6 +7,7 @@
   word-wrap: break-word;
   color: hsl(183, 100%, 15%);
   flex: 0 1 auto;
+  font-size: 0.75rem;
 }
 
 @media (min-width: 768px) {

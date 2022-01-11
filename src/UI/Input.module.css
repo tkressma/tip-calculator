@@ -23,12 +23,6 @@
   margin: 1rem 0 0 0;
 }
 
-#input-buttons {
-  height: 44px;
-  border: none;
-  overflow: hidden;
-}
-
 .percentages {
   display: grid;
   grid-template-columns: 1fr 1fr;
