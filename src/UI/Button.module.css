@@ -1,0 +1,14 @@
+.button {
+  padding: 0.75rem 0;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: hsl(185, 41%, 84%);
+}

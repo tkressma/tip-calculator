@@ -2,21 +2,35 @@ import React from "react";
 import styles from "./Input.module.css";
 
 export default function Input(props) {
+  const invalidErrorMessage = !props.valid && (
+    <label
+      for={props.label}
+      className={`${styles["input-label"]} ${styles["input-label--invalid"]}`}
+    >
+      Can't be zero
+    </label>
+  );
+
   return props["input-type"] === "field" ? (
-    <div className={styles["input-container"]}>
-      <label for={props.label} className={styles["input-label"]}>
-        {props.title}
-      </label>
+    <section className={`${styles["input-container"]}`}>
+      <div className={styles["label-container"]}>
+        <label for={props.label} className={styles["input-label"]}>
+          {props.title}
+        </label>
+        {invalidErrorMessage}
+      </div>
+
       <input
         style={{ backgroundImage: `url(${props.icon})` }}
-        className={styles["input-field"]}
+        className={`${styles["input-field"]} ${!props.valid && styles.invalid}`}
         type="number"
+        min="0"
         name={props.label}
         onChange={props.onChange}
       ></input>
-    </div>
+    </section>
   ) : (
-    <div className={styles["input-container"]}>
+    <section className={styles["input-container"]}>
       <label for={props.label} className={styles["input-label"]}>
         {props.title}
       </label>
@@ -76,6 +90,6 @@ export default function Input(props) {
           <span>Custom</span>
         </label>
       </div>
-    </div>
+    </section>
   );
 }

@@ -15,12 +15,22 @@
 }
 
 .input-label {
-  display: block;
+  display: inline-block;
+  width: 50%;
   color: hsl(186, 14%, 43%);
   font-size: 1rem;
   font-weight: 700;
   padding: 0.5rem 0;
   margin: 1rem 0 0 0;
+}
+
+.input-label--invalid {
+  text-align: right;
+  color: orangered;
+}
+
+.invalid {
+  outline: 2px solid orangered;
 }
 
 .percentages {
@@ -38,12 +48,17 @@
   display: inline-block;
   width: 100%;
   padding: 0.5rem 0;
-  text-align: center;
-  border-radius: 5px;
   font-size: 24px;
   font-weight: 700;
+  text-align: center;
+  border-radius: 5px;
   color: hsl(0, 0%, 100%);
   background-color: hsl(183, 100%, 15%);
+}
+
+.percentages span:hover {
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
 }
 
 .percentages input[type="radio"]:checked + span {

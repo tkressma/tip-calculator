@@ -7,16 +7,20 @@ import personIcon from "../images/icon-person.svg";
 import TipCalculations from "./TipCalculations";
 
 export default function Calculator(props) {
-  const [bill, setBill] = useState(0);
-  const [people, setPeople] = useState(0);
+  const [bill, setBill] = useState({ value: 0, valid: true });
+  const [people, setPeople] = useState({ value: 0, valid: true });
   const [tip, setTip] = useState(0);
 
   function billChangeHandler(e) {
-    setBill(e.target.value);
+    return e.target.value < 1
+      ? setBill({ value: 0, valid: false })
+      : setBill({ value: e.target.value, valid: true });
   }
 
   function personChangeHandler(e) {
-    setPeople(e.target.value);
+    return e.target.value < 1
+      ? setPeople({ value: 0, valid: false })
+      : setPeople({ value: e.target.value, valid: true });
   }
 
   function tipChangeHandler(e) {
@@ -31,11 +35,14 @@ export default function Calculator(props) {
           label="bill-amount"
           input-type="field"
           icon={dollarIcon}
+          value={bill}
           onChange={billChangeHandler}
+          valid={bill.valid}
         />
         <Input
           title="Select Tip %"
           label="tip-percentage"
+          value={tip}
           onClick={tipChangeHandler}
         />
         <Input
@@ -43,7 +50,9 @@ export default function Calculator(props) {
           label="people-count"
           input-type="field"
           icon={personIcon}
+          value={people}
           onChange={personChangeHandler}
+          valid={people.valid}
         />
         <TipCalculations />
       </main>
