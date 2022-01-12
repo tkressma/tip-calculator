@@ -26,7 +26,7 @@ export default function Calculator(props) {
   function tipChangeHandler(e) {
     console.log(tip);
 
-    setTip(Number(e.target.value.replace("%", "")));
+    setTip(+e.target.value.replace("%", ""));
   }
 
   return (

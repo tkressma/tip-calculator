@@ -3,10 +3,17 @@ import styles from "./Input.module.css";
 
 export default function Input(props) {
   const [customValue, setCustomValue] = useState("");
+  const [activeTip, setActiveTip] = useState();
 
   const handleCustomInputChange = (e) => {
     setCustomValue(e.target.value);
+    setActiveTip("");
     props.onClick(e);
+  };
+
+  const handleClick = (e) => {
+    props.onClick(e);
+    setActiveTip(e.target.value);
   };
 
   const invalidErrorMessage = !props.valid && (
@@ -46,40 +53,50 @@ export default function Input(props) {
       <div className={styles.percentages}>
         <input
           type="button"
-          onClick={props.onClick}
-          className={styles.percent}
+          onClick={handleClick}
+          className={`${styles.percent} ${
+            activeTip === "5%" ? styles.active : ""
+          }`}
           name="percentage"
           aria-label="Five percent tip"
           value="5%"
         />
         <input
           type="button"
-          onClick={props.onClick}
-          className={styles.percent}
+          onClick={handleClick}
+          className={`${styles.percent} ${
+            activeTip === "10%" ? styles.active : ""
+          }`}
           name="percentage"
           aria-label="Ten percent tip"
           value="10%"
         />
         <input
           type="button"
-          onClick={props.onClick}
-          className={styles.percent}
+          onClick={handleClick}
+          className={`${styles.percent} ${
+            activeTip === "15%" ? styles.active : ""
+          }`}
           name="percentage"
           aria-label="Fifteen percent tip"
           value="15%"
         />
         <input
           type="button"
-          onClick={props.onClick}
-          className={styles.percent}
+          onClick={handleClick}
+          className={`${styles.percent} ${
+            activeTip === "25%" ? styles.active : ""
+          }`}
           name="percentage"
           aria-label="Twenty-five percent tip"
           value="25%"
         />
         <input
           type="button"
-          onClick={props.onClick}
-          className={styles.percent}
+          onClick={handleClick}
+          className={`${styles.percent} ${
+            activeTip === "50%" ? styles.active : ""
+          }`}
           name="percentage"
           aria-label="Fifty percent tip"
           value="50%"
