@@ -24,7 +24,9 @@ export default function Calculator(props) {
   }
 
   function tipChangeHandler(e) {
-    setTip(e.target.value);
+    console.log(tip);
+
+    setTip(Number(e.target.value.replace("%", "")));
   }
 
   return (
@@ -42,7 +44,6 @@ export default function Calculator(props) {
         <Input
           title="Select Tip %"
           label="tip-percentage"
-          value={tip}
           onClick={tipChangeHandler}
         />
         <Input
