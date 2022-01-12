@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./Input.module.css";
 
 export default function Input(props) {
@@ -12,13 +12,11 @@ export default function Input(props) {
   );
 
   return props["input-type"] === "field" ? (
-    <section className={`${styles["input-container"]}`}>
-      <div className={styles["label-container"]}>
-        <label for={props.label} className={styles["input-label"]}>
-          {props.title}
-        </label>
-        {invalidErrorMessage}
-      </div>
+    <section>
+      <label for={props.label} className={styles["input-label"]}>
+        {props.title}
+      </label>
+      {invalidErrorMessage}
 
       <input
         style={{ backgroundImage: `url(${props.icon})` }}
@@ -26,8 +24,8 @@ export default function Input(props) {
           !props.valid && styles["input-field--invalid"]
         }`}
         type="number"
-        value={props.value}
         min="0"
+        value={props.value}
         name={props.label}
         onChange={props.handleValue}
         onFocus={props.handleValue}

@@ -1,14 +1,10 @@
-.title {
-  width: 100%;
+.logo {
   max-width: 100px;
-  margin: 2rem auto;
-  letter-spacing: 0.5rem;
-  text-align: center;
-  word-wrap: break-word;
-  color: hsl(183, 100%, 15%);
-  flex: 0 1 auto;
-  font-size: 1.5rem;
+  margin: 3rem auto;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1440px) {
+  .logo {
+    margin-bottom: 4rem;
+  }
 }

@@ -15,7 +15,7 @@ export default function TipCalculations(props) {
 
   return (
     <section className={styles["tip-results"]}>
-      <div className={styles["tip-results-container"]}>
+      <div className={styles.results}>
         <Calculation
           title="Tip Amount"
           tipCalculation={!props.valid ? "0.00" : tipPerPerson.toFixed(2)}
@@ -24,8 +24,8 @@ export default function TipCalculations(props) {
           title="Total"
           totalCalculation={!props.valid ? "0.00" : totalPerPerson.toFixed(2)}
         />
-        <Button text="Reset" onClick={handleReset} />
       </div>
+      <Button text="Reset" onClick={handleReset} />
     </section>
   );
 }

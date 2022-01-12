@@ -1,6 +1,10 @@
-import React from "react";
 import styles from "./Header.module.css";
+import logo from "../images/logo.svg";
 
 export default function Header() {
-  return <h1 className={styles.title}>SPLITTER</h1>;
+  return (
+    <div class={styles.logo}>
+      <img src={logo} />
+    </div>
+  );
 }

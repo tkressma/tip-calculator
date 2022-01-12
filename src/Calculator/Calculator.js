@@ -64,32 +64,34 @@ export default function Calculator(props) {
   return (
     <Card class={styles.calculator}>
       <main className={styles["calculator-container"]}>
-        <Input
-          title="Bill"
-          label="bill-amount"
-          input-type="field"
-          icon={dollarIcon}
-          value={bill.value}
-          handleValue={billChangeHandler}
-          valid={bill.valid}
-        />
-        <Input
-          title="Select Tip %"
-          label="tip-percentage"
-          tip={tip}
-          customTip={customTip}
-          handleClick={tipHandler}
-          changeCustomTip={customTipHandler}
-        />
-        <Input
-          title="Number of People"
-          label="people-count"
-          input-type="field"
-          icon={personIcon}
-          value={people.value}
-          handleValue={personChangeHandler}
-          valid={people.valid}
-        />
+        <div className={styles.controls}>
+          <Input
+            title="Bill"
+            label="bill-amount"
+            input-type="field"
+            icon={dollarIcon}
+            value={bill.value}
+            handleValue={billChangeHandler}
+            valid={bill.valid}
+          />
+          <Input
+            title="Select Tip %"
+            label="tip-percentage"
+            tip={tip}
+            customTip={customTip}
+            handleClick={tipHandler}
+            changeCustomTip={customTipHandler}
+          />
+          <Input
+            title="Number of People"
+            label="people-count"
+            input-type="field"
+            icon={personIcon}
+            value={people.value}
+            handleValue={personChangeHandler}
+            valid={people.valid}
+          />
+        </div>
         <Results
           data={{ bill: bill.value, people: people.value, tip: tip }}
           valid={dataIsValid}
