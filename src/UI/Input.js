@@ -1,18 +1,20 @@
 import React, { useState } from "react";
+import { act } from "react-dom/test-utils";
 import styles from "./Input.module.css";
 
 export default function Input(props) {
-  const [customValue, setCustomValue] = useState("");
+  const [customTip, setCustomTip] = useState("");
   const [activeTip, setActiveTip] = useState();
 
   const handleCustomInputChange = (e) => {
-    setCustomValue(e.target.value);
-    setActiveTip("");
+    setCustomTip(e.target.value);
+    setActiveTip(e.target.value);
     props.onClick(e);
   };
 
   const handleClick = (e) => {
     props.onClick(e);
+    setCustomTip("");
     setActiveTip(e.target.value);
   };
 
@@ -103,13 +105,15 @@ export default function Input(props) {
         />
         <input
           type="number"
-          className={`${styles.percent} ${styles["percent--custom"]}`}
+          className={`${styles.percent} ${styles["percent--custom"]} ${
+            activeTip === customTip ? styles.active : ""
+          }`}
           name="percentage"
           min="0"
           max="100"
           aria-label="Custom tip"
           placeHolder="Custom"
-          value={customValue}
+          value={customTip}
           onChange={handleCustomInputChange}
         />
       </div>

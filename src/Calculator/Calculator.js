@@ -12,20 +12,18 @@ export default function Calculator(props) {
   const [tip, setTip] = useState(0);
 
   function billChangeHandler(e) {
-    return e.target.value < 1
+    e.target.value < 1
       ? setBill({ value: 0, valid: false })
       : setBill({ value: e.target.value, valid: true });
   }
 
   function personChangeHandler(e) {
-    return e.target.value < 1
+    e.target.value < 1
       ? setPeople({ value: 0, valid: false })
       : setPeople({ value: e.target.value, valid: true });
   }
 
   function tipChangeHandler(e) {
-    console.log(tip);
-
     setTip(+e.target.value.replace("%", ""));
   }
 
@@ -55,7 +53,9 @@ export default function Calculator(props) {
           onChange={personChangeHandler}
           valid={people.valid}
         />
-        <TipCalculations />
+        <TipCalculations
+          data={{ bill: bill.value, people: people.value, tip: tip }}
+        />
       </main>
     </Card>
   );
