@@ -1,0 +1,29 @@
+.calculation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin: 0 0 1rem;
+}
+
+.calculation-result {
+  align-items: center;
+  text-align: right;
+  color: hsl(172, 67%, 45%);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.calculation-title {
+  font-size: 1rem;
+  margin: 0;
+  color: white;
+}
+
+.calculation-info {
+  color: hsl(186, 14%, 43%);
+  margin: 0;
+  padding: 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
