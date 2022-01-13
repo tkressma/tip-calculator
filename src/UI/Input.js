@@ -34,10 +34,10 @@ export default function Input(props) {
     </section>
   ) : (
     <section className={styles["input-container"]}>
-      <label className={styles["input-label"]} for="tip-percentages">
-        {props.title}
-      </label>
       <fieldset name="tip-percentages" id="tip-percentages">
+        <legend className={styles["input-label"]} for="tip-percentages">
+          {props.title}
+        </legend>
         <div className={styles.percentages}>
           <input
             type="button"

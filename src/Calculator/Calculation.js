@@ -4,7 +4,7 @@ import styles from "./Calculation.module.css";
 export default function Calculation(props) {
   return (
     <div className={styles.calculation}>
-      <section aria-details="Calculated tip amount (per person)">
+      <section>
         <h2 class={styles["calculation-title"]}>{props.title}</h2>
         <p class={styles["calculation-info"]}>/ person</p>
       </section>
