@@ -15,7 +15,7 @@ export default function Calculator(props) {
 
   // Check to make sure all values are given before calculating
   useEffect(() => {
-    if (bill.value === 0 || people.value === 0 || tip === 0) {
+    if (bill.value === "" || people.value === "" || tip === 0) {
       setDataIsValid(false);
       return;
     }

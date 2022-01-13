@@ -24,7 +24,6 @@ export default function Input(props) {
           !props.valid && styles["input-field--invalid"]
         }`}
         type="number"
-        min="0"
         value={props.value}
         name={props.label}
         onChange={props.handleValue}
