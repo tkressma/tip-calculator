@@ -3,6 +3,11 @@
   margin: 3rem auto;
 }
 
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
 @media (min-width: 1440px) {
   .logo {
     margin-bottom: 4rem;

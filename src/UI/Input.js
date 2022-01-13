@@ -25,6 +25,7 @@ export default function Input(props) {
         }`}
         type="number"
         value={props.value}
+        id={props.label}
         name={props.label}
         onChange={props.handleValue}
         onFocus={props.handleValue}
@@ -33,10 +34,10 @@ export default function Input(props) {
     </section>
   ) : (
     <section className={styles["input-container"]}>
-      <label className={styles["input-label"]} for="tip percentages">
+      <label className={styles["input-label"]} for="tip-percentages">
         {props.title}
       </label>
-      <fieldset name="tip percentages">
+      <fieldset name="tip-percentages" id="tip-percentages">
         <div className={styles.percentages}>
           <input
             type="button"
