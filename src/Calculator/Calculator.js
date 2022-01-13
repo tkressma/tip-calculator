@@ -7,8 +7,8 @@ import personIcon from "../images/icon-person.svg";
 import Results from "./Results";
 
 export default function Calculator(props) {
-  const [bill, setBill] = useState({ value: 0, valid: true });
-  const [people, setPeople] = useState({ value: 0, valid: true });
+  const [bill, setBill] = useState({ value: "", valid: true });
+  const [people, setPeople] = useState({ value: "", valid: true });
   const [tip, setTip] = useState(0);
   const [dataIsValid, setDataIsValid] = useState(false);
   const [customTip, setCustomTip] = useState("");
@@ -26,14 +26,14 @@ export default function Calculator(props) {
   // Update bill state when user changes input
   const billChangeHandler = (e) => {
     e.target.value < 1
-      ? setBill({ value: 0, valid: false })
+      ? setBill({ value: "", valid: false })
       : setBill({ value: e.target.value, valid: true });
   };
 
   // Update people state when user changes input
   const personChangeHandler = (e) => {
     e.target.value < 1
-      ? setPeople({ value: 0, valid: false })
+      ? setPeople({ value: "", valid: false })
       : setPeople({ value: e.target.value, valid: true });
   };
 

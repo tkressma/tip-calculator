@@ -29,6 +29,7 @@ export default function Input(props) {
         name={props.label}
         onChange={props.handleValue}
         onFocus={props.handleValue}
+        placeholder="0"
       ></input>
     </section>
   ) : (
