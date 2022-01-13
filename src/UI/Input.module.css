@@ -39,6 +39,12 @@
   color: orangered;
 }
 
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 .percentages {
   display: grid;
   grid-template-columns: 1fr 1fr;

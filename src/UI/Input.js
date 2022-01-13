@@ -33,74 +33,70 @@ export default function Input(props) {
     </section>
   ) : (
     <section className={styles["input-container"]}>
-      <label className={styles["input-label"]} for="percentage">
+      <label className={styles["input-label"]} for="tip percentages">
         {props.title}
       </label>
-      <div className={styles.percentages}>
-        <input
-          type="button"
-          onClick={props.handleClick}
-          className={`${styles.percent} ${
-            props.tip === "5" ? styles.active : ""
-          }`}
-          name="percentage"
-          aria-label="Five percent tip"
-          value="5%"
-        />
-        <input
-          type="button"
-          onClick={props.handleClick}
-          className={`${styles.percent} ${
-            props.tip === "10" ? styles.active : ""
-          }`}
-          name="percentage"
-          aria-label="Ten percent tip"
-          value="10%"
-        />
-        <input
-          type="button"
-          onClick={props.handleClick}
-          className={`${styles.percent} ${
-            props.tip === "15" ? styles.active : ""
-          }`}
-          name="percentage"
-          aria-label="Fifteen percent tip"
-          value="15%"
-        />
-        <input
-          type="button"
-          onClick={props.handleClick}
-          className={`${styles.percent} ${
-            props.tip === "25" ? styles.active : ""
-          }`}
-          name="percentage"
-          aria-label="Twenty-five percent tip"
-          value="25%"
-        />
-        <input
-          type="button"
-          onClick={props.handleClick}
-          className={`${styles.percent} ${
-            props.tip === "50" ? styles.active : ""
-          }`}
-          name="percentage"
-          aria-label="Fifty percent tip"
-          value="50%"
-        />
-        <input
-          type="number"
-          className={`${styles.percent} ${styles["percent--custom"]} ${
-            props.tip === props.customTip ? styles.active : ""
-          }`}
-          name="percentage"
-          min="0"
-          max="100"
-          aria-label="Custom tip"
-          placeHolder="Custom"
-          onChange={props.changeCustomTip}
-          value={props.customTip}
-        />
-      </div>
+      <fieldset name="tip percentages">
+        <div className={styles.percentages}>
+          <input
+            type="button"
+            onClick={props.handleClick}
+            className={`${styles.percent} ${
+              props.tip === "5" ? styles.active : ""
+            }`}
+            name="Five percent tip"
+            value="5%"
+          />
+          <input
+            type="button"
+            onClick={props.handleClick}
+            className={`${styles.percent} ${
+              props.tip === "10" ? styles.active : ""
+            }`}
+            name="Ten percent tip"
+            value="10%"
+          />
+          <input
+            type="button"
+            onClick={props.handleClick}
+            className={`${styles.percent} ${
+              props.tip === "15" ? styles.active : ""
+            }`}
+            name="Fifteen percent tip"
+            value="15%"
+          />
+          <input
+            type="button"
+            onClick={props.handleClick}
+            className={`${styles.percent} ${
+              props.tip === "25" ? styles.active : ""
+            }`}
+            name="Twenty-five percent tip"
+            value="25%"
+          />
+          <input
+            type="button"
+            onClick={props.handleClick}
+            className={`${styles.percent} ${
+              props.tip === "50" ? styles.active : ""
+            }`}
+            name="Fifty percent tip"
+            value="50%"
+          />
+          <input
+            type="number"
+            className={`${styles.percent} ${styles["percent--custom"]} ${
+              props.tip === props.customTip ? styles.active : ""
+            }`}
+            min="0"
+            max="100"
+            name="Custom tip"
+            placeHolder="Custom"
+            onChange={props.changeCustomTip}
+            value={props.customTip}
+          />
+        </div>
+      </fieldset>
     </section>
   );
 }
