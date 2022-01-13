@@ -12,3 +12,8 @@
 .button:hover {
   background-color: hsl(185, 41%, 84%);
 }
+
+.inactive {
+  opacity: 25%;
+  pointer-events: none;
+}

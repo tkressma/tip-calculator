@@ -70,8 +70,11 @@
 
 .percent--custom {
   background-color: hsl(189, 41%, 97%);
-  color: hsl(186, 14%, 43%);
   padding: 0 1rem;
+}
+
+.percent--custom::placeholder {
+  color: hsl(186, 14%, 43%);
 }
 
 .percent--custom:focus {

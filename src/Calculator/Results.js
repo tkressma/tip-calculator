@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Results.module.css";
 import Calculation from "./Calculation";
 import Button from "../UI/Button";
@@ -25,7 +25,7 @@ export default function TipCalculations(props) {
           totalCalculation={!props.valid ? "0.00" : totalPerPerson.toFixed(2)}
         />
       </div>
-      <Button text="Reset" onClick={handleReset} />
+      <Button text="Reset" onClick={handleReset} valid={props.valid} />
     </section>
   );
 }

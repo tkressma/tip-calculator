@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 * {
   box-sizing: border-box;
+  font-family: "Space Mono", monospace;
 }
 
 html {
-  font-family: "Space Mono", monospace;
   height: 100%;
 }
 
