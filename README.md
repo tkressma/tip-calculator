@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./splitter-screenshot-desktop.jpg)
+![](./splitter-screenshot-desktop.png)
 
 ### Links
 
